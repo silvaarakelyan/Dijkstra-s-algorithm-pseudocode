@@ -1,5 +1,5 @@
 
-Dijksras algorithm
+##########Dijksras algorithm##########
 
 void calcualtedistance( int source)// this funcion gets the vertex for which it must calculate the shortest path to all the vertexes
 '	//here we keep 3 arrays, 1 to keep track of vertexes that we have visited, 
@@ -52,4 +52,7 @@ int getClosestUnmarkedNode(bool *visited, bool *distance){
 		//finding the mindistance
 		mindistance=distance[i];
 		closestUnmarkedNode=i;
-}}
+	}
+	
+	return closestUnmarkedNode:
+}
