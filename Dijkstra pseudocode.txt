@@ -1,0 +1,55 @@
+
+Dijksras algorithm
+
+void calcualtedistance( int source)// this funcion gets the vertex for which it must calculate the shortest path to all the vertexes
+'	//here we keep 3 arrays, 1 to keep track of vertexes that we have visited, 
+	//2nd to keep shortest distances and the third to keep the previous vertex
+
+  int *predecessor=new int[number_of_vertex];
+  int *distance =new int[number_of_vertex];
+  bool *visited= new bool[number of vertex];
+
+
+	//mark all the vertexes not visited, set distance as ininity, and predecessors -1
+  for(int i=0; i<number_of_vertex; i++){
+		visited[i]=false;
+		distance[i]=INT_MAX;
+		predecessor[i]=-1;
+  }
+
+
+	//set the distance of source vertex to itself 0
+  distance[source]=0;
+
+  int closestUnmarkedNode;
+  
+  int count =0;
+
+  while(count is less than number of vertexes){
+
+	closestUnmarkedNode= get_closestUnmarkedNode(visited, distance);
+	
+	for(all the vertexes){
+	//examine its unvisited neighboors
+	if(the vertex isnt visited)&&(closestUnmarkedNode and vertex are connected){
+		//calculate distance of each neighboor from current vertex
+		if(distance of this vertex > distance of ClosestUnmarkedNode +weigth of vertex){
+		//update shortest distance
+			distance[i]= distance[closestUnmarkedNode]+ weight;
+		//and update previous vertex for each updated vertex
+			predecessor[i]= closestUnmarkedNode;
+		}
+	}
+ 	count++;
+}
+
+int getClosestUnmarkedNode(bool *visited, bool *distance){
+	int minDistance=INT_MAX;
+	int closestUnmarkedNode;
+
+	for(all the vertexes){
+		if(vertex isnt visited)&&(mindistance> distance[i]){
+		//finding the mindistance
+		mindistance=distance[i];
+		closestUnmarkedNode=i;
+}}
